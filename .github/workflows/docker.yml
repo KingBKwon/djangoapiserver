@@ -33,7 +33,7 @@ jobs:
           
       - name: build and release to DockerHub
         env:
-          NAME: $ {{ secrets.DOCKERHUB_USERNAME}}
+          NAME: $ {{secrets.DOCKERHUB_USERNAME}}
           REPO: apiserver
         run: |
           docker build -t $REPO .
